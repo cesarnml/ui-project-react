@@ -1,0 +1,74 @@
+footer {
+  display: flex;
+  flex-flow: column;
+  padding: 65px 8.4% 0;
+  width: 100vw;
+  border: 2px solid blue;
+  .contact-info {
+    display: flex;
+    flex-flow: row;
+    .email-signup {
+      display: flex;
+      flex-flow: column;
+      padding-right: 6.6%;
+      input {
+        margin: 18px 0 10px;
+        height: 42px;
+        width: 272px;
+        border-radius: 6px;
+        font-size: 1.6rem;
+        font-weight: 100;
+        padding-left: 10px;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+      }
+    }
+    .contact-address {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      .locations {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        h4 {
+          margin-bottom: 10px;
+        }
+      }
+      address {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        p {
+          font-size: 1.3em;
+          letter-spacing: .1rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  display: flex;
+  flex-flow: column;
+  background: @background-footer;
+  font-size: 1.4rem h3;
+  color: @color-footer;
+  h3,
+  h4 {
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    color: @color-footer;
+    padding: 2px 0;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    font-weight: 200;
+    padding: 40px 0 10px;
+  }
+}

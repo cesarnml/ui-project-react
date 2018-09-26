@@ -14,7 +14,7 @@ class Layout extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/services' component={Services} />
         <Route path='/contact' component={Contact} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

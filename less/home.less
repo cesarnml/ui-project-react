@@ -1,7 +1,136 @@
-.jumbotron {
-  background-image: url('../src/img/home/home-jumbotron.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 598px;
+.home-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  line-height: 2.4rem;
+  overflow: hidden;
+  border: 2px solid red;
+
+  .jumbotron {
+    .bckimg('../src/img/home/home-jumbotron.png');
+    height: 598px;
+    font-size: 6.4rem;
+    font-weight: bold;
+    line-height: 7.5rem;
+    padding: 283px 8.3% 0px;
+    color: @color-jumbotron;
+    border: 2px solid green;
+  }
+
+  .content-top {
+    padding: 0 8.4%;
+    border: 2px solid blue;
+    overflow: hidden;
+    .content-top--wrapper {
+      padding: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      .content-top--img {
+        width: 48.5%;
+      }
+      .content-top--card {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: 48.5%;
+        padding: 0 2%;
+        
+        p {
+          padding: 30px 0;
+          font-size: 1.45rem;
+        }
+        
+        .content--btn {
+          font-size: 1.6rem;
+          background-color: @background;
+          border: 1px solid @color;
+          height: 45px;
+          width: 134px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+.top-wrapper01 {
+  flex-flow: row-reverse;
+}
+
+.content--subheaders {
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: @color;
+}
+
+
+
+.content-top--img {
+  height: 275px;
+}
+
+.top-img01 {
+  .bckimg('../src/img/home/home-img-1.png');
+}
+
+.top-img02 {
+  .bckimg('../src/img/home/home-img-2.png');
+}
+
+.content-middle {
+  padding: 100px 8.4% 50px;
+  .content-middle--wrapper {
+    display: flex;
+    flex-flow: column;
+    padding: 50px 0;
+    .content-middle--img-title {
+      width: 314px;
+      height: 95px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.4rem;
+      letter-spacing: 1rem;
+      position: relative;
+      top: -47px;
+      align-self: flex-end;
+    }
+    .first-paragraph {
+      margin-bottom: 34px;
+    }
+    p {
+      padding: 0 27%;
+
+    }
+    .outskirts {
+      align-self: flex-start;
+    }
+  }
+}
+
+.content-middle--img {
+  height: 230px;
+}
+
+.content-middle--img-title {
+  background: @color-projects;
+}
+
+.middle-img01 {
+  .bckimg('../src/img/home/home-villas-img.png');
+}
+
+.middle-img02 {
+  .bckimg('../src/img/home/home-outskirts-img.png');
+}
+
+.middle-img03 {
+  .bckimg('../src/img/home/home-the-blocks-img.png');
+}
+
+p {
+  font-size: 1.6rem;
 }

@@ -2,11 +2,10 @@ import React from 'react'
 import hamburger from '../img/nav-hamburger.png'
 const Navbar = () => {
   return (
-    <header>
       <nav className='nav'>
-        <brand className='nav--logo'>
+        <div className='nav--logo'>
           S&J
-        </brand>
+        </div>
         <ul className='nav--list'>
           <img
             className='nav--hamburger'
@@ -18,7 +17,6 @@ const Navbar = () => {
           <li className='nav--item'>Contact</li>
         </ul>
       </nav>
-    </header>
   )
 }
 
