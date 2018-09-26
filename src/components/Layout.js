@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import Header from './Header'
+import Navbar from './Navbar'
 import Home from './Home'
 import Services from './Services'
 import Contact from './Contact'
@@ -10,7 +10,7 @@ class Layout extends Component {
   render () {
     return (
       <div className='Layout'>
-        <Header />
+        <Navbar />
         <Route exact path='/' component={Home} />
         <Route path='/services' component={Services} />
         <Route path='/contact' component={Contact} />
