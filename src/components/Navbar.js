@@ -9,6 +9,7 @@ class Navbar extends Component {
   constructor (props) {
     super(props)
     this.xImg = null
+    this.expandNav = null
     this.state = {
       isOpen: false
     }
@@ -18,30 +19,34 @@ class Navbar extends Component {
     this.setState({
       isOpen: true
     })
+    console.log(this.expandNav)
   }
 
   handleXClick = e => {
     this.setState({
       isOpen: false
     })
+    console.log(this.expandNav)
   }
 
   handleXMouseEnter = e => {
-    console.log(this.xImg)
-    let x = TweenMax.to(this.xImg, 1, { rotation: 720 })
-    console.log('entering x')
+    TweenMax.to(this.xImg, 0.5, { rotation: 720 })
   }
 
   render () {
     return this.state.isOpen
-      ? <nav className='expand-nav' onClick={this.handleXClick}>
+      ? <nav
+        className='expand-nav'
+        onClick={this.handleXClick}
+        ref={nav => (this.expandNav = nav)}
+      >
         <img
           className='nav-close'
           src={hamburgerClose}
           alt='nav-close-icon'
           onMouseEnter={this.handleXMouseEnter}
           ref={img => (this.xImg = img)}
-          />
+        />
         <ul className='nav--list'>
           <Link to='/' className='nav--item '>Home</Link>
           <Link to='/services' className='nav--item '>Services</Link>
@@ -50,14 +55,14 @@ class Navbar extends Component {
       </nav>
       : <nav className='nav'>
         <div className='nav--logo'>
-            S&J
-          </div>
+          <Link to='/' className='logo-link'>S&J</Link>
+        </div>
         <img
           className='nav--hamburger'
           src={hamburger}
           alt='hamburger-icon'
           onClick={this.handleNavClick}
-          />
+        />
       </nav>
   }
 }
