@@ -13,11 +13,13 @@
   top: 0px;
   z-index: 1000;
   font-weight: 500;
+  animation: shrinkNav 2s ease-in-out;
   @media @max500 {
     position: fixed;
     background-color: rgba(rgba(160, 169, 178, 0));
   }
 }
+
 .logo-link {
   color: @color-nav;
   text-decoration: none;
@@ -45,6 +47,7 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 
 .nav-close {

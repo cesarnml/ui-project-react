@@ -153,6 +153,7 @@ body {
   top: 0px;
   z-index: 1000;
   font-weight: 500;
+  animation: shrinkNav 2s ease-in-out;
 }
 @media (max-width: 500px) {
   .nav {
@@ -185,6 +186,7 @@ body {
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 .nav-close {
   align-self: flex-end;

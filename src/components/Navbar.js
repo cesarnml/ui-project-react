@@ -8,29 +8,42 @@ import hamburgerClose from '../img/nav-hamburger-close.png'
 class Navbar extends Component {
   constructor (props) {
     super(props)
-    this.xImg = null
-    this.expandNav = null
     this.state = {
       isOpen: false
     }
+    this.xImg = React.createRef()
+    this.expandNav = React.createRef()
+    this.hamburger = React.createRef()
   }
 
   handleNavClick = e => {
     this.setState({
       isOpen: true
     })
-    console.log(this.expandNav)
   }
 
   handleXClick = e => {
+    console.dir(this.expandNav)
     this.setState({
       isOpen: false
     })
-    console.log(this.expandNav)
   }
 
   handleXMouseEnter = e => {
-    TweenMax.to(this.xImg, 0.5, { rotation: 720 })
+    console.log(this.hamburger)
+    console.log(this.xImg)
+    console.log(this.expandNav)
+  }
+
+  componentDidMount = () => {
+    console.log('component mounted')
+    console.log(this.hamburger)
+  }
+
+  componentDidUpdate = () => {
+    console.log('component updated')
+    console.log(this.xImg)
+    console.log(this.expandNav)
   }
 
   render () {
@@ -38,15 +51,15 @@ class Navbar extends Component {
       ? <nav
         className='expand-nav'
         onClick={this.handleXClick}
-        ref={nav => (this.expandNav = nav)}
-      >
+        ref={this.expandNav}
+        >
         <img
           className='nav-close'
           src={hamburgerClose}
           alt='nav-close-icon'
           onMouseEnter={this.handleXMouseEnter}
-          ref={img => (this.xImg = img)}
-        />
+          ref={this.xImg}
+          />
         <ul className='nav--list'>
           <Link to='/' className='nav--item '>Home</Link>
           <Link to='/services' className='nav--item '>Services</Link>
@@ -62,7 +75,8 @@ class Navbar extends Component {
           src={hamburger}
           alt='hamburger-icon'
           onClick={this.handleNavClick}
-        />
+          ref={this.hamburger}
+          />
       </nav>
   }
 }
