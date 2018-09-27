@@ -138,7 +138,7 @@ body {
   color: #222222;
   background: #FFFFFF;
 }
-nav {
+.nav {
   color: #FFFFFF;
   background: rgba(160, 169, 178, 0.98);
   height: 50px;
@@ -149,26 +149,49 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0px;
   z-index: 1000;
   font-weight: 500;
 }
 @media (max-width: 500px) {
-  nav {
+  .nav {
+    position: fixed;
     background-color: rgba(160, 169, 178, 0);
   }
 }
 .nav--list {
   display: flex;
-  justify-content: space-around;
+  flex-flow: column;
   line-height: 8.5rem;
   font-size: 4.8rem;
+  position: relative;
+  bottom: 40vh;
+}
+.expand-nav {
+  height: 100%;
+  width: 100%;
+  background: rgba(160, 169, 178, 0.98);
+  z-index: 2000;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-close {
+  align-self: flex-end;
+  padding: 40px 60px;
 }
 .nav--logo {
   font-size: 2.4rem;
 }
 .nav--logo:hover {
   color: #222222;
+}
+.nav--item {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .nav--item:hover {
   color: #222222;
@@ -456,6 +479,16 @@ nav {
 }
 p {
   font-size: 1.6rem;
+}
+.services {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 footer {
   display: flex;
