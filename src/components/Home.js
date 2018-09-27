@@ -29,7 +29,7 @@ const Home = () => {
           <div className='content-top--img top-img02' />
           <div className='content-top--card'>
             <h2 className='content--subheaders'>
-              Futuristic Design
+              Futuristic Designs
             </h2>
             <p>
               Et sed autem causae appareat, tempor abhorreant te mei, facer facilisis sit ea. Eu timeam vidisse consectetuer sed. Duo etiam laboramus dissentiet in, nec no errem
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </section>
       <section className='content-middle'>
-        <h2 className='content--subheaders'>Recent Projects</h2>
+        <h2 className='content--subheaders recent-projects'>Recent Projects</h2>
         <div className='content-middle--wrapper'>
           <div className='content-middle--img middle-img01' />
           <div className='content-middle--img-title'>THE VILLAS</div>

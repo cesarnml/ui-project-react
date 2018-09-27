@@ -5,8 +5,10 @@ const Footer = () => {
     <footer>
       <div className='contact-info'>
         <div className='email-signup'>
-          <h3>Interested in starting a project?</h3>
-          <h4>Let's talk:</h4>
+          <div>
+            <h3>Interested in starting a project?</h3>
+            <h4>Let's talk:</h4>
+          </div>
           <input placeholder='Enter email' type='email' />
           <p>We'll never share your email with anyone else.</p>
         </div>

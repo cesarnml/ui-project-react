@@ -4,10 +4,11 @@
   line-height: 2.4rem;
   .jumbotron {
     .bckimg('../img/home/home-jumbotron.png');
+    position: relative;
     height: 598px;
-    font-size: 6.4rem;
+    font-size: 6.5rem;
     font-weight: bold;
-    line-height: 7.5rem;
+    line-height: 7.4rem;
     padding: 360px 6% 0px;
     color: @color-jumbotron;
     transition: all 2s;
@@ -15,26 +16,57 @@
       font-size: 5.0rem;
       line-height: 6.0rem;
     }
+    @media @max500 {
+      h1 {
+        position: absolute;
+        bottom: 30px;
+      }
+      height: 260px;
+      .bckimg('../img/home/home-mobile-jumbotron.png')
+    }
+    @media @max500 {
+      margin-bottom: 30px;
+    }
+    @media @max320 {
+      margin-bottom: 30px;
+    }
   }
   .content-top {
-    padding: 0 8.4%;
-    overflow: hidden;
+    padding: 0 6%;
+    @media @max800 {
+      padding: 0 4%;
+    }
+    @media @max500 {
+      padding: 0 2%;
+    }
     .content-top--wrapper {
       padding: 50px 0;
       display: flex;
       justify-content: space-between;
+      @media @max500 {
+        flex-flow: column;
+        align-items: center;
+        padding: 0
+      }
       .content-top--img {
         width: 48.5%;
+        @media @max500 {
+          width: 290px;
+          height: 275px;
+        }
       }
       .content-top--card {
         display: flex;
         flex-flow: column;
         justify-content: center;
-        width: 48.5%;
+        width: 95%;
         padding: 0 2%;
         p {
           padding: 30px 0;
           font-size: 1.45rem;
+          @media @max500 {
+            padding: 0;
+          }
         }
         .content--btn {
           font-size: 1.6rem;
@@ -45,6 +77,10 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          @media @max500 {
+            width: 100%;
+            margin: 30px 0;
+          }
         }
       }
     }
@@ -57,30 +93,50 @@
 
 .content--subheaders {
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: @color;
+  text-align: center;
+  @media @max500 {
+    padding: 20px 0;
+    text-align: left;
+  }
 }
 
 .content-top--img {
   height: 275px;
+  @media @max500 {
+    width: 290px;
+    height: 275px;
+  }
 }
 
 .top-img01 {
   .bckimg('../img/home/home-img-1.png');
+  @media @max500 {
+    .bckimg('../img/home/home-mobile-img-1.png');
+  }
 }
 
 .top-img02 {
   .bckimg('../img/home/home-img-2.png');
+  @media @max500 {
+    .bckimg('../img/home/home-mobile-img-2.png');
+  }
 }
-
+.recent-projects {
+  padding: 0 20px;
+}
 .content-middle {
-  padding: 100px 8.4% 50px;
+  padding: 100px 6% 50px;
+  @media @max500 {
+    padding: 0;
+  }
   .content-middle--wrapper {
     display: flex;
     flex-flow: column;
-    padding: 50px 0;
+    padding: 30px 0;
     .content-middle--img-title {
-      width: 314px;
+      width: 300px;
       height: 95px;
       display: flex;
       justify-content: center;
@@ -90,15 +146,32 @@
       position: relative;
       top: -47px;
       align-self: flex-end;
+      @media @max500 {
+        width: 90%;
+        top: -30px;
+        align-self: center;
+      }
     }
     .first-paragraph {
       margin-bottom: 34px;
     }
     p {
       padding: 0 27%;
+      @media @max800 {
+        padding: 0 15%;
+      }
+      @media @max500 {
+        padding: 0 10%;
+      }
+      @media @max320 {
+        padding: 0 4%;
+      }
     }
     .outskirts {
       align-self: flex-start;
+      @media @max500 {
+        align-self: center;
+      }
     }
   }
 }
@@ -113,14 +186,23 @@
 
 .middle-img01 {
   .bckimg('../img/home/home-villas-img.png');
+  @media @max500 {
+    .bckimg('../img/home/home-mobile-villas-img.png')
+  }
 }
 
 .middle-img02 {
   .bckimg('../img/home/home-outskirts-img.png');
+  @media @max500 {
+    .bckimg('../img/home/home-mobile-outskirts-img.png')
+  }
 }
 
 .middle-img03 {
   .bckimg('../img/home/home-the-blocks-img.png');
+  @media @max500 {
+    .bckimg('../img/home/home-mobile-the-blocks-img.png')
+  }
 }
 
 p {

@@ -9,60 +9,89 @@ footer {
   font-size: 1.2rem;
   color: @color-footer;
   @media @max800 {
-    padding: 40px 2% 0;
+    padding: 30px 5% 0;
+  }
+  @media @max320 {
+    padding: 20px 4%;
   }
   .contact-info {
     display: flex;
     justify-content: space-between;
+    @media @max800 {
+      align-items: center;
+      flex-flow: column;
+    }
     .email-signup {
       display: flex;
       flex-flow: column;
+      width: 35%;
+      @media @max800 {
+        width: 100%;
+        align-items: center;
+      }
+      @media @max500 {
+        align-items: flex-start;
+      }
       h3,
       h4 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         line-height: 2.4rem;
         color: @color-footer;
         padding: 2px 0;
       }
       input {
-        margin: 18px 0 10px;
+        margin: 10px 0 10px;
         height: 42px;
-        width: 272px;
+        width: 250px;
         border-radius: 6px;
         font-size: 1.6rem;
         font-weight: 100;
         padding-left: 10px;
+        @media @max800 {
+          height: 35px;
+        }
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 300;
         letter-spacing: .05rem;
+        margin-bottom: 10px;
       }
     }
     .contact-address {
-      width: 100%;
+      width: 60%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      @media @max800 {
+        width: 100%;
+        margin-top: 10px;
+      }
+      @media @max320 {
+        flex-flow: column;
+        align-items: flex-start;
+      }
       .location {
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        @media @max320 {
+          margin-bottom: 20px;
+        }
         h4 {
-          font-size: 1.9rem;
-          line-height: 2.4rem;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
           color: @color-footer;
           padding: 2px 0;
-          margin-bottom: 15px;
         }
       }
       address {
         height: 100%;
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        align-items: flex-start;
         p {
-          font-size: 1.2em;
+          font-size: 1.3rem;
           letter-spacing: .1rem;
+          line-height: 2.4rem;
           font-weight: 300;
         }
       }
@@ -73,6 +102,7 @@ footer {
     font-size: 1.2rem;
     letter-spacing: .1rem;
     font-weight: 300;
-    padding: 20px 0 10px;
+    padding: 15px 0 10px;
+    align-self: flex-start;
   }
 }
