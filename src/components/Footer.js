@@ -11,7 +11,7 @@ const Footer = () => {
           <p>We'll never share your email with anyone else.</p>
         </div>
         <div className='contact-address'>
-          <div className='locations'>
+          <div className='location'>
             <h4>New York</h4>
             <address>
               <p>123 Lane</p>
@@ -20,7 +20,7 @@ const Footer = () => {
               <p>202 555 0144</p>
             </address>
           </div>
-          <div className='locations'>
+          <div className='location'>
             <h4>Florida</h4>
             <address>
               <p>Ocean Drive</p>
@@ -29,7 +29,7 @@ const Footer = () => {
               <p>502 555 0144</p>
             </address>
           </div>
-          <div className='locations'>
+          <div className='location'>
             <h4>California</h4>
             <address>
               <p>Mountain Street</p>
@@ -37,10 +37,21 @@ const Footer = () => {
               <p>San Diego, CA 22345</p>
               <p>702 555 0144</p>
             </address>
-          </div> 
-        </div> 
-      </div> 
-      <p className='copyright'>Copyright <span role='img' alt='copyright' aria-label='copyright' aria-labelledby="author">©️</span> 2018 Smith and Jones</p>
+          </div>
+        </div>
+      </div>
+      <p className='copyright'>
+        Copyright
+        <span
+          role='img'
+          alt='copyright'
+          aria-label='copyright'
+          aria-labelledby='author'
+        >
+          ©️
+        </span>
+        2018 Smith and Jones
+      </p>
     </footer>
   )
 }

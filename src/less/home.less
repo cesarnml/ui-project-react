@@ -2,21 +2,22 @@
   max-width: 1024px;
   margin: 0 auto;
   line-height: 2.4rem;
-  border: 2px solid red;
   .jumbotron {
     .bckimg('../img/home/home-jumbotron.png');
     height: 598px;
     font-size: 6.4rem;
     font-weight: bold;
     line-height: 7.5rem;
-    padding: 283px 8.3% 0px;
+    padding: 360px 6% 0px;
     color: @color-jumbotron;
-    border: 2px solid green;
-    overflow: hidden;
+    transition: all 2s;
+    @media @max800 {
+      font-size: 5.0rem;
+      line-height: 6.0rem;
+    }
   }
   .content-top {
     padding: 0 8.4%;
-    border: 2px solid blue;
     overflow: hidden;
     .content-top--wrapper {
       padding: 50px 0;

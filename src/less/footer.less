@@ -1,16 +1,29 @@
 footer {
   display: flex;
   flex-flow: column;
-  padding: 65px 8.4% 0;
-  width: 100vw;
-  border: 2px solid blue;
+  padding: 40px 6% 0;
+  max-width: 1024px;
+  margin: 0 auto;
+  transition: all 1s;
+  background: @background-footer;
+  font-size: 1.2rem;
+  color: @color-footer;
+  @media @max800 {
+    padding: 40px 2% 0;
+  }
   .contact-info {
     display: flex;
-    flex-flow: row;
+    justify-content: space-between;
     .email-signup {
       display: flex;
       flex-flow: column;
-      padding-right: 6.6%;
+      h3,
+      h4 {
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+        color: @color-footer;
+        padding: 2px 0;
+      }
       input {
         margin: 18px 0 10px;
         height: 42px;
@@ -29,14 +42,17 @@ footer {
     .contact-address {
       width: 100%;
       display: flex;
-      justify-content: space-between;
-      overflow: hidden;
-      .locations {
+      justify-content: space-evenly;
+      .location {
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         h4 {
-          margin-bottom: 10px;
+          font-size: 1.9rem;
+          line-height: 2.4rem;
+          color: @color-footer;
+          padding: 2px 0;
+          margin-bottom: 15px;
         }
       }
       address {
@@ -45,30 +61,18 @@ footer {
         flex-flow: column;
         justify-content: space-between;
         p {
-          font-size: 1.3em;
+          font-size: 1.2em;
           letter-spacing: .1rem;
           font-weight: 300;
         }
       }
     }
   }
-  display: flex;
-  flex-flow: column;
-  background: @background-footer;
-  font-size: 1.4rem h3;
-  color: @color-footer;
-  h3,
-  h4 {
-    font-size: 1.9rem;
-    line-height: 2.4rem;
-    color: @color-footer;
-    padding: 2px 0;
-  }
   .copyright {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     letter-spacing: .1rem;
-    font-weight: 200;
-    padding: 40px 0 10px;
+    font-weight: 300;
+    padding: 20px 0 10px;
   }
 }

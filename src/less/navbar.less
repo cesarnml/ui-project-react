@@ -1,18 +1,17 @@
 nav {
-    color: @color-nav;
-    background: @background-nav;
-    height: 50px;
-    padding: 0 8.4%;
-    width: 100%;
-    overflow: hidden;
-    border: 2px solid green;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top:0;
-    font-weight: 500;
-  }
+  color: @color-nav;
+  background: @background-nav;
+  height: 50px;
+  padding: 0 6%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  font-weight: 500;
+}
 
 .nav--list {
   display: flex;
@@ -23,19 +22,17 @@ nav {
 
 .nav--logo {
   font-size: 2.4rem;
-  border: 1px solid salmon;
   &:hover {
     color: @color-nav-hover;
   }
-}
-
-.nav--hamburger {
-  border: 1px solid salmon;
 }
 
 .nav--item {
-  display: none;
   &:hover {
     color: @color-nav-hover;
   }
+}
+
+.hide {
+  display: none;
 }
